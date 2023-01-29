@@ -20,8 +20,10 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="logo"></div>
-          <div className="menu-icon" onClick={handleShowNavbar}></div>
+          <div className="logo">logo</div>
+          <div className="menu-icon" onClick={handleShowNavbar}>
+            hamburger
+          </div>
           <div className={`nav-elements  ${showNavbar && 'active'}`}>
             <ul>
               <li>
