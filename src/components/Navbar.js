@@ -1,35 +1,44 @@
-import { NavLink } from 'react-router-dom';
-import { ReactComponent as Brand } from '../../assets/icons/logo.svg';
-import './navbar.css';
+//Ref: https://dev.to/zeyadetman/from-reactjs-class-component-to-functional-component---usestate-part-1-2l3m
+
+//Ref: https://www.codevertiser.com/reactjs-responsive-navbar/
+
+import React, { Component, useState } from 'react';
+import { Outlet, Link } from 'react-router-dom';
+
+import { ReactComponent as Hamburger } from '../assets/icons/hamburger.svg';
+import { ReactComponent as Brand } from '../assets/icons/logo.svg';
+import '../navbar.css';
 
 const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo">
-          <Brand />
+    <>
+      <nav className="navbar">
+        <div className="container">
+          <div className="logo"></div>
+          <div className="menu-icon" onClick={handleShowNavbar}></div>
+          <div className={`nav-elements  ${showNavbar && 'active'}`}>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="nav-elements">
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      <Outlet />
+    </>
   );
 };
 

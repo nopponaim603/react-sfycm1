@@ -6,6 +6,8 @@ import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout';
+import Navbar from './components/Navbar';
+
 import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
@@ -17,7 +19,7 @@ export default function App() {
       {' '}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="blogs" element={<Blogs />} />
             <Route path="contact" element={<Contact />} />
