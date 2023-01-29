@@ -5,11 +5,9 @@
 import React, { Component, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-import { ReactComponent as Hamburger } from '../assets/icons/hamburger.svg';
-import { ReactComponent as Brand } from '../assets/icons/logo.svg';
 import '../navbar.css';
 
-const Navbar = () => {
+const Content = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
@@ -30,10 +28,38 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/vhv_ep1">vhv_ep1</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep2">vhv_ep2</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep3">vhv_ep3</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep4">vhv_ep4</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep5">vhv_ep5</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep6">vhv_ep6</Link>
+              </li>
+              <li>
+                <Link to="/vhv_ep7">vhv_ep7</Link>
+              </li>
+
+              <li>
+                <Link to="/mini_blendfood">mini_blendfood</Link>
+              </li>
+              <li>
+                <Link to="/mini_karaoke">mini_karaoke</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/mini_tongue">mini_tongue</Link>
               </li>
             </ul>
           </div>
@@ -44,4 +70,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Content;
