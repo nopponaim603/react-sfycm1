@@ -56,9 +56,6 @@ const Content = () => {
                 <Link to="/mini_karaoke">mini_karaoke</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
                 <Link to="/mini_tongue">mini_tongue</Link>
               </li>
             </ul>
