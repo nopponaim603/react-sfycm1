@@ -12,6 +12,9 @@ const vhv_ep1 = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
+      <a href="/img/twitter.png" download>
+        <button>Dowload image</button>
+      </a>
     </div>
   );
 };
